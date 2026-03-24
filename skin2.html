@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushman Skin & Cosmetology | Luxury Care in Dwarka</title>
+    <meta name="description" content="Ayushman Skin and Cosmetology Centre - Premium dermatological care in Dwarka, Delhi. Expert solutions by Dr. S.P. Singh.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #152A38; /* Dark Navy/Slate */
+            --secondary: #C5A880; /* Soft Gold */
+            --bg-light: #FDFCF8; /* Creamy Off-White */
+            --text-dark: #2C3E50;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .text-secondary { color: var(--secondary); }
+        .border-secondary { border-color: var(--secondary); }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+        
+        .btn-outline {
+            border: 1px solid var(--secondary);
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        /* Interactive Service Cards */
+        .service-card {
+            border: 1px solid rgba(197, 168, 128, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(21, 42, 56, 0.08);
+        }
+        .service-card .icon-wrapper {
+            transition: all 0.5s ease;
+            color: var(--primary);
+        }
+        .service-card:hover .icon-wrapper {
+            color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        /* Review Card */
+        .review-card {
+            background: white;
+            border-left: 3px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transform: translateX(5px);
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Custom image mask */
+        .img-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-secondary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b" style="border-color: rgba(197, 168, 128, 0.2);">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex flex-col items-start leading-none group">
+                <span class="font-serif text-3xl font-semibold text-primary tracking-wide group-hover:text-secondary transition-colors duration-300">AYUSHMAN</span>
+                <span class="text-[9px] uppercase tracking-[0.2em] text-gray-400 font-medium">Skin & Cosmetology</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold uppercase tracking-widest text-primary">
+                <a href="#home" class="hover:text-secondary transition duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] auto after:bg-secondary hover:after:w-full after:transition-all">Home</a>
+                <a href="#about" class="hover:text-secondary transition duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] auto after:bg-secondary hover:after:w-full after:transition-all">About</a>
+                <a href="#services" class="hover:text-secondary transition duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] auto after:bg-secondary hover:after:w-full after:transition-all">Services</a>
+                <a href="#reviews" class="hover:text-secondary transition duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] auto after:bg-secondary hover:after:w-full after:transition-all">Reviews</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-flex btn-primary px-8 py-3 text-xs uppercase tracking-widest font-semibold items-center gap-2">
+                <span>Book Clinic Visit</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <button class="md:hidden text-primary"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-[50%] h-[100%] bg-white img-mask shadow-sm"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 w-full">
+            <div class="space-y-8 fade-in-up">
+                <div class="inline-flex items-center gap-2 text-secondary text-xs font-semibold uppercase tracking-widest">
+                    <span class="w-8 h-[1px] bg-secondary"></span> Dwarka's Premier Dermatology
+                </div>
+                <h1 class="text-5xl md:text-7xl font-serif text-primary leading-[1.1] font-light">
+                    Redefining <br>
+                    <span class="italic text-secondary">Your Skin's</span> <br>
+                    Radiance.
+                </h1>
+                <p class="text-sm md:text-base text-gray-500 leading-relaxed max-w-md font-light">
+                    Experience holistic, personalized, and humane clinical care. We blend advanced medical technology with an aesthetic eye to bring out your natural, youthful confidence.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#contact" class="btn-primary px-10 py-4 text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
+                        Get Started <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#services" class="btn-outline px-10 py-4 text-xs uppercase tracking-widest font-semibold flex items-center justify-center">
+                        Explore Treatments
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative fade-in-up" style="animation-delay: 0.2s;">
+                <div class="aspect-[3/4] md:aspect-square bg-white p-2 shadow-2xl relative z-10">
+                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('images/dermatology_hero_bg_1774350460000.png');"></div>
+                    
+                    <!-- Floating Testimonial -->
+                    <div class="absolute -bottom-8 -left-8 md:-left-12 bg-primary p-6 shadow-xl max-w-sm text-white">
+                        <div class="text-secondary mb-3"><i data-lucide="quote" class="w-6 h-6 fill-current"></i></div>
+                        <p class="font-serif italic text-lg leading-snug mb-4">
+                            "Threw the last razor of my life! Sessions were quick, painless, and my skin stays smooth. I feel free again."
+                        </p>
+                        <div class="flex items-center justify-between border-t border-white/20 pt-4">
+                            <span class="text-xs uppercase tracking-widest font-semibold text-secondary">Ritika</span>
+                            <span class="text-[9px] text-gray-400">Laser Hair Removal</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative element -->
+                <div class="absolute -top-6 -right-6 w-32 h-32 border border-secondary -z-10"></div>
+                <div class="absolute -bottom-16 -right-16 w-64 h-64 bg-secondary/5 rounded-full -z-20 blur-2xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specializations (Clean Interactive Icons) -->
+    <section id="services" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary mb-3 border-l-2 border-secondary pl-3">Our Expertise</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif text-primary">Tailored Skin & Body Care</h3>
+                </div>
+                <p class="text-gray-500 text-sm max-w-sm font-light">
+                    Driven by science and aesthetics, our treatments are specifically designed to address Indian skin and hair typologies with precision.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Face -->
+                <div class="service-card p-8 group">
+                    <div class="icon-wrapper w-12 h-12 mb-6">
+                        <i data-lucide="sparkles" class="w-full h-full" stroke-width="1.5"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl text-primary mb-3">Face Treatments</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-6 font-light">
+                        Advanced facials including Hydrafacial, Botox, Fillers, and Carbon Laser Peels for a sculpted, glowing visage.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-primary group-hover:text-secondary transition">
+                        Discover <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <!-- Skin -->
+                <div class="service-card p-8 group">
+                    <div class="icon-wrapper w-12 h-12 mb-6">
+                        <i data-lucide="droplet" class="w-full h-full" stroke-width="1.5"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl text-primary mb-3">Skin Perfection</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-6 font-light">
+                        Targeted solutions for acne, pigmentation, uneven skin tones, and medical skin peels.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-primary group-hover:text-secondary transition">
+                        Discover <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <!-- Hair -->
+                <div class="service-card p-8 group">
+                    <div class="icon-wrapper w-12 h-12 mb-6">
+                        <i data-lucide="scissors" class="w-full h-full" stroke-width="1.5"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl text-primary mb-3">Hair Restoration</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-6 font-light">
+                        Halt hair loss and promote regrowth through Mesotherapy, PRP, GFC, and advanced Hair Transplants.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-primary group-hover:text-secondary transition">
+                        Discover <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <!-- Surgery -->
+                <div class="service-card p-8 group">
+                    <div class="icon-wrapper w-12 h-12 mb-6">
+                        <i data-lucide="activity" class="w-full h-full" stroke-width="1.5"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl text-primary mb-3">Cosmetology</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-6 font-light">
+                        Surgical and non-surgical skin tightening, remodeling, rhinoplasty, and body shaping procedures.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-primary group-hover:text-secondary transition">
+                        Discover <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dr Profile (Illustrator Image) -->
+    <section id="about" class="py-24" style="background-color: var(--primary);">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 relative">
+                <div class="aspect-[4/5] bg-white/5 p-4 mx-auto max-w-sm">
+                    <!-- USING THE VECTOR ILLUSTRATION HERE AS REQUESTED -->
+                    <div class="w-full h-full bg-cover bg-center border border-secondary/30 grayscale hover:grayscale-0 transition duration-700" style="background-image: url('images/dr_sp_singh_illust.png');"></div>
+                </div>
+                <div class="absolute top-1/2 -right-8 -translate-y-1/2 hidden md:flex flex-col gap-4 text-white">
+                    <div class="w-16 h-[1px] bg-secondary"></div>
+                    <span class="text-[10px] uppercase font-semibold tracking-[0.2em] transform -rotate-90 origin-left mt-8">Lead Expert</span>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-8 text-white">
+                <div>
+                    <h2 class="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">The Artisan of Skin</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif text-white mb-2">Dr. S. P. Singh</h3>
+                    <p class="text-xs tracking-widest font-light text-gray-400">MBBS, DVD | SENIOR DERMATOLOGIST</p>
+                </div>
+                <div class="text-sm font-light text-gray-300 leading-relaxed space-y-4 max-w-lg">
+                    <p>
+                        With over 22 years of clinical excellence in Dwarka, Delhi, Dr. S. P. Singh represents the pinnacle of dermatological expertise and aesthetic vision.
+                    </p>
+                    <p>
+                        An alumnus of University College of Medical Sciences (Delhi) and Maulana Azad Medical College, his approach is grounded in minimal intervention, safety, and natural-looking results.
+                    </p>
+                </div>
+                <ul class="grid grid-cols-2 gap-y-4 gap-x-2 text-xs font-light tracking-wide pt-4">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Acne & Scars</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Anti-Aging Therapy</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Hair Regrowth</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Pigmentation</li>
+                </ul>
+                <div class="pt-6">
+                    <a href="#contact" class="btn-outline px-8 py-3 text-xs uppercase tracking-widest font-semibold inline-block hover:bg-white hover:text-primary hover:border-white">
+                        Consult Dr. Singh
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us (Minimalist) -->
+    <section class="py-24 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-primary mb-16">The Ayushman Difference</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+                <div class="space-y-4">
+                    <div class="text-secondary text-4xl font-serif font-light mb-4 text-opacity-80">01</div>
+                    <h4 class="text-sm font-semibold uppercase tracking-widest text-primary">Precision Tech</h4>
+                    <p class="text-xs text-gray-500 px-4 font-light">FDA-approved, state-of-the-art medical equipment.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-secondary text-4xl font-serif font-light mb-4 text-opacity-80">02</div>
+                    <h4 class="text-sm font-semibold uppercase tracking-widest text-primary">Subtle Results</h4>
+                    <p class="text-xs text-gray-500 px-4 font-light">Enhancing your features without artificiality.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-secondary text-4xl font-serif font-light mb-4 text-opacity-80">03</div>
+                    <h4 class="text-sm font-semibold uppercase tracking-widest text-primary">Mastery</h4>
+                    <p class="text-xs text-gray-500 px-4 font-light">Decades of specialized dermatological experience.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-secondary text-4xl font-serif font-light mb-4 text-opacity-80">04</div>
+                    <h4 class="text-sm font-semibold uppercase tracking-widest text-primary">Accessible</h4>
+                    <p class="text-xs text-gray-500 px-4 font-light">Uncompromising luxury and care at fair pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Google Reviews Section -->
+    <section id="reviews" class="py-24 bg-[var(--bg-light)]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 border border-gray-200 text-xs font-semibold text-primary rounded-full shadow-sm">
+                    <span class="text-yellow-500 flex gap-1">
+                        <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                        <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                        <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                        <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                        <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                    </span>
+                    5.0 Google Rating
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif text-primary">Words of Trust</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review -->
+                <div class="review-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-serif text-lg text-primary">K</div>
+                        <div>
+                            <h5 class="text-sm font-semibold text-primary">Karan Singh</h5>
+                            <div class="flex text-yellow-500 gap-0.5 mt-1">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 font-light leading-relaxed">
+                        "I had a wonderful experience! From the moment I walked in, the staff made me feel comfortable. Everyone was professional, friendly, and very knowledgeable. The treatment went smoothly."
+                    </p>
+                </div>
+
+                <!-- Review -->
+                <div class="review-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-serif text-lg text-primary">A</div>
+                        <div>
+                            <h5 class="text-sm font-semibold text-primary">Amit Maurya</h5>
+                            <div class="flex text-yellow-500 gap-0.5 mt-1">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 font-light leading-relaxed">
+                        "Great results for acne and pigmentation treatment. Highly recommended skin centre in Dwarka. My skin feels deeply refreshed and rejuvenated."
+                    </p>
+                </div>
+
+                <!-- Review -->
+                <div class="review-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-serif text-lg text-primary">F</div>
+                        <div>
+                            <h5 class="text-sm font-semibold text-primary">Fazal Ahmad</h5>
+                            <div class="flex text-yellow-500 gap-0.5 mt-1">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 font-light leading-relaxed">
+                        "I visited Ayushman Skin Centre for pigmentation treatment, and now my skin is glowing. I am very happy with the results. The doctors were supportive."
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-primary border-b border-primary hover:text-secondary hover:border-secondary transition pb-1">
+                    Read all Google Reviews <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elegant Footer & Contact -->
+    <footer id="contact" class="bg-primary text-white pt-24 pb-10 border-t" style="border-color: rgba(197, 168, 128, 0.2);">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 mb-20 lg:mb-24">
+                <!-- Location & Map -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-serif text-3xl mb-2 text-secondary">Visit Our Clinic</h3>
+                        <p class="text-sm font-light text-gray-400">Located in the heart of Dwarka, offering a discreet and luxurious environment.</p>
+                    </div>
+                    <div class="text-sm font-light text-gray-300 space-y-4">
+                        <p class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-secondary shrink-0 mt-0.5"></i>
+                            <span class="leading-relaxed">Plot No. 2, Sector -12, Ashirwad Chowk,<br>H L Galleria Building, Second Floor,<br>Dwarka, New Delhi - 110075.</span>
+                        </p>
+                        <p class="flex items-center gap-4">
+                            <i data-lucide="phone" class="w-5 h-5 text-secondary shrink-0"></i>
+                            <span>+91 95998 16603 &nbsp; | &nbsp; +91 95998 16604</span>
+                        </p>
+                        <p class="flex items-center gap-4">
+                            <i data-lucide="mail" class="w-5 h-5 text-secondary shrink-0"></i>
+                            <a href="mailto:info@ayushmanscs.com" class="hover:text-secondary transition">info@ayushmanscs.com</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Map Embed Placeholder -->
+                <div class="h-64 md:h-full min-h-[250px] bg-white/5 border border-white/10 p-2 group relative">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-100 group-hover:opacity-0 transition duration-300 bg-primary/40 backdrop-blur-[2px]">
+                        <span class="text-xs uppercase tracking-widest font-semibold">Interactive Map</span>
+                    </div>
+                    <iframe class="w-full h-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.788506161491!2d77.0428612!3d28.5761129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1af8d55c7a31%3A0xe53cd7faeae5d30f!2sH%20L%20Square!5e0!3m2!1sen!2sin!4v1711234567890!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-white/10 text-xs font-light text-gray-500">
+                <div class="flex items-center gap-2">
+                    <span class="font-serif text-lg text-white font-semibold tracking-wider">AYUSHMAN</span>
+                    <span>&copy; 2026. All Rights Reserved.</span>
+                </div>
+                <div class="flex gap-6 uppercase tracking-widest">
+                    <a href="#" class="hover:text-secondary transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-secondary transition">Terms of Service</a>
+                </div>
+                <!-- Social -->
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-secondary transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-secondary transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-secondary transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Simple script for navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if(window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
